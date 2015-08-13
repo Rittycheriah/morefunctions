@@ -1,0 +1,8 @@
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctionsUnitTests\bin\Debug\MoreFunctionsUnitTests.dll
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctionsUnitTests\bin\Debug\MoreFunctionsUnitTests.pdb
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctionsUnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctionsUnitTests\bin\Debug\MoreFunctions.exe
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctionsUnitTests\bin\Debug\MoreFunctions.pdb
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctionsUnitTests\obj\Debug\MoreFunctionsUnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctionsUnitTests\obj\Debug\MoreFunctionsUnitTests.dll
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctionsUnitTests\obj\Debug\MoreFunctionsUnitTests.pdb

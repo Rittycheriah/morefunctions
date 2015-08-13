@@ -30,32 +30,99 @@ namespace MoreFunctions
             }
         }
 
+        public int[] swapInPlace(int[] inputs, int left_most_index, int right_most_index)
+        {
+            return null;
+        }
+
+        public bool isSorted(int[] inputs)
+        {
+            throw new NotImplementedException();
+        }
+
         public static int[] InsertionSort(int[] inputs)
         {
             var answer = new int[inputs.Length];
             var temp = new int[inputs.Length];
+            // get a forreal clone of this array.
             int[] copy_of_inputs = inputs.Clone() as int[];
-            for (var i = 0;i < inputs.Length; i++) {
-                var item = inputs[i];
-                for (var j = 0;j < temp.Length; j++)
+            var i = 0;
+            var j = i + 1;
+            var swapped = false;
+            while (j < copy_of_inputs.Length)
+            {
+                while (i < copy_of_inputs.Length - 1 && swapped == false)
                 {
-                    var second_item = inputs[j];
+                    var second_item = copy_of_inputs[j];
+                    var item = copy_of_inputs[i];
                     if (item > second_item)
                     {
-                        var tmp1 = item;
-                        var tmp2 = second_item;
-                        item = tmp2;
-                        second_item = tmp1;
-                    } else
-                    {
-                        // Leave it?
+                        // Swappin' son , seems useful
+                        var tmpa = item;
+                        var tmpb = second_item;
+                        copy_of_inputs[i] = tmpb; // item located at j
+                        copy_of_inputs[j] = tmpa;
+                        // j++; keep an eye on it
+                        swapped = true;
                     }
 
+                    if (j == copy_of_inputs.Length - 1)
+                    {
+                        i = 0;
+                        j = i + 1;
+                        break;
+                    }
+                    else {
+                        i++; // keep an eye on this
+                        j = i + 1; // the same as j++;
+                    }
                 }
+                i++; // Keep an eye on this as well
+            }
+
+            // here's what we are trying to implement above:
+            // 1. Compare item to second_item;
+            // 2. if item > second item, swap
+            //      else start over (increment)
+            // 3. pick next 2 things
+            // 4. Repeat steps 1 - 3
+            // 5. Start over
+
+            //for (var i = 0;i < inputs.Length; i++) {
+            //    var item = inputs[i];
+            //    var j = 0;
+
+            //    while (j < temp.Length)
+            //    {
+            //        var second_item = inputs[j];
+            //        if (j == temp.Length - 1)
+            //        {
+            //            answer[j - i] = item;
+            //            j += 1;
+            //            continue;
+                        // start inner loop at current index +1
+                    //}
+                    //else if (item < second_item)
+                    //{
+
+                    //} else { 
+
+                        //temp.Length - 1 
+                        // leave it? 
+                        /*
+                          var tmp1 = item;
+                          var tmp2 = second_item;
+                          item = tmp2;
+                          second_item = tmp1;
+                        */
+                //    }
+
+                //    j += 1;
+                //}
 
                 //var item2 = inputs[i+1];
-            }
-            return answer;
+            //}
+            return copy_of_inputs;
         }
     }
 }

@@ -1,0 +1,5 @@
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctions\bin\Debug\MoreFunctions.exe.config
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctions\bin\Debug\MoreFunctions.exe
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctions\bin\Debug\MoreFunctions.pdb
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctions\obj\Debug\MoreFunctions.exe
+C:\Users\Rainu\classprojs\morefunctions\MoreFunctions\obj\Debug\MoreFunctions.pdb
