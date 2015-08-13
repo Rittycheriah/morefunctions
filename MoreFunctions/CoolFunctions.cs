@@ -35,9 +35,16 @@ namespace MoreFunctions
             return null;
         }
 
-        public bool isSorted(int[] inputs)
+        public static bool isSorted(int[] inputs)
         {
-            throw new NotImplementedException();
+            for (var i = 0; i < inputs.Length - 1; i++)
+            {
+                if (inputs[i] > inputs[i+1])
+                {
+                    return false;
+                } 
+            }
+            return true;
         }
 
         public static int[] InsertionSort(int[] inputs)
@@ -49,10 +56,16 @@ namespace MoreFunctions
             var i = 0;
             var j = i + 1;
             var swapped = false;
-            while (j < copy_of_inputs.Length)
+            var end = false;
+            while (!swapped && j != copy_of_inputs.Length - 1)
             {
-                while (i < copy_of_inputs.Length - 1 && swapped == false)
+                // what is the job of the outer loop
+                // Answer: Tells us when to stop restting 'i' and return results
+                swapped = false;
+                while (i < copy_of_inputs.Length - 1)
                 {
+                    // what's the job of the inner loop
+                    // answer: to iterate through the [i]
                     var second_item = copy_of_inputs[j];
                     var item = copy_of_inputs[i];
                     if (item > second_item)
@@ -69,15 +82,24 @@ namespace MoreFunctions
                     if (j == copy_of_inputs.Length - 1)
                     {
                         i = 0;
-                        j = i + 1;
+                    }
+                    else if (CoolFunctions.isSorted(copy_of_inputs))
+                    {
                         break;
                     }
-                    else {
-                        i++; // keep an eye on this
-                        j = i + 1; // the same as j++;
+                    else
+                    {
+                        i++;
                     }
+
+                    j = i + 1; // same as j++
+
+                } // end of inner while loop
+
+                if (swapped == false)
+                {
+                    break; // if nothing swapped - then we are done done.
                 }
-                i++; // Keep an eye on this as well
             }
 
             // here's what we are trying to implement above:
